@@ -6,7 +6,7 @@ RUN apt-get update && apt-get -y install build-essential
 # libpq-dev is required
 RUN apt-get update && apt-get -y install libpq-dev
 
-RUN apt-get update && apt-get -y install libsqlite3-dev
+RUN apt-get update && apt-get -y install libsqlite3-dev nodejs
 
 
 # Add Gemfile before rest of repo, for Docker caching purposes
