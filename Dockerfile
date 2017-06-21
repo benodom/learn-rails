@@ -3,11 +3,11 @@ FROM quay.io/aptible/ruby:2.4-ubuntu-16.04
 
 RUN apt-get update && apt-get -y install build-essential
 
-# System prerequisites
+# libpq-dev is required
 RUN apt-get update && apt-get -y install libpq-dev
 
-# If you require additional OS dependencies, install them here:
-# RUN apt-get update && apt-get -y install imagemagick nodejs
+RUN apt-get update && apt-get -y install libsqlite3-dev
+
 
 # Add Gemfile before rest of repo, for Docker caching purposes
 # See http://ilikestuffblog.com/2014/01/06/
